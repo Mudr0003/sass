@@ -5,20 +5,6 @@
 @import "variables";
 @import "mixins";
 
-    
-/***********************************************
-                NOTES
-light blue  #C7F7FF
-med blue    #89C0C9
-dark blue   #3a5E63
-light brown #C9A689
-dark brown  #7C593C
-light grey  #d4d4d4
-dark grey   #222
-
-                DEFAULTS
-***********************************************/
-
 *{
     padding:0;
     margin: 0;
@@ -116,7 +102,7 @@ header{
     float: none;
   } 
 }
-///////////
+ 
 section{
   &.focal{
     width: 400px; /* default */
@@ -137,23 +123,30 @@ section{
     border-left:1px solid $color-dark-blue;
     margin-bottom: 2rem;
 }
-footer .col-2:first-child{
+
+////check this
+footer {
+& .col-2:first-child{
     border-left: 0;
 }
-footer{
+& {
     padding:2rem 0;
 }
-footer p:last-child{
+& p:last-child{
 }
+}
+
 /***********************************************
                 NAVIGATION
 ***********************************************/
-header nav{
+
+header {
+& nav{
     @extend .row;
     padding:2rem 0;
     
 }
-header nav>ul>li>a{
+& nav>ul>li>a{
     display:block;
     text-align: center;
     text-decoration: none;
@@ -166,7 +159,7 @@ header nav>ul>li>a{
     line-height: 1;
     background-color: $clr-white;
 }
-header nav>ul>li>a:hover{
+& nav>ul>li>a:hover{
     font-weight: 700;
     color:$color-dark-brown;
 }
@@ -174,11 +167,11 @@ header nav>ul>li>a:hover{
 /***********************************************
                 CONTENT
 ***********************************************/
-header h1{
+& h1{
     color: $color-dark-brown;
     letter-spacing: 0.1rem;
 }
-header h1 i.fa-lg{
+& h1 i.fa-lg{
     display:block;
     width: 25%;
     float:left;
@@ -186,7 +179,7 @@ header h1 i.fa-lg{
     line-height: 12.7936rem;
     color: $color-light-brown;
 }
-header h1 i.fa-lg ~ span{
+& h1 i.fa-lg ~ span{
     float: right;
     width: 75%;
     font-size: 3.998rem;
@@ -196,6 +189,8 @@ header h1 i.fa-lg ~ span{
     padding-left: 1rem;
     text-align: right;
 }
+}
+
 .focal h2{
     font-size: 1.999rem;
     line-height: 1.2;
@@ -212,7 +207,7 @@ header h1 i.fa-lg ~ span{
 .content1 h3 i{
     vertical-align:middle;
     padding-right: 2rem;
-}
+} 
 .content1 p{
     font-size: 1.414rem;
     padding: 0.5rem 2rem 2rem;
@@ -236,26 +231,30 @@ header h1 i.fa-lg ~ span{
 /***********************************************
                 FOOTER
 ***********************************************/
-footer h4{
+
+footer {
+    
+& h4{
     font-size: 1.414rem;
     padding: 0.5rem 2rem;
     color: $color-dark-brown;
 }
-footer p{
+& p{
     font-size: 1rem;
     padding: 0.5rem 2rem;
     color: $color-dark-grey;
 }
-footer .fa-circle{
+& .fa-circle{
     color: $color-dark-grey;
 }
-footer h4[lang=de]{
+& h4[lang=de]{
    display:block;
 }
-footer h4[lang=en],
-footer h4[lang=ar],
-footer h4[lang=ru]{
+& h4[lang=en],
+& h4[lang=ar],
+& h4[lang=ru]{
     display:none;
+    }
 }
 
 
